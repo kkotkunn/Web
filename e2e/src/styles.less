@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+@import "config.less";
+
+.d11 {
+  
+  padding: 50px 20px;
+  text-align: center;
+}
+.d11 h1 {
+  font-family: Andale Mono, monospace;
+  -webkit-text-stroke: 1px rgba(42, 9, 230, 0.5);
+  position: relative;
+  color: rgb(0, 0, 0); 
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 3em;
+  padding: 11px 60px;
+  margin: 0; 
+  line-height: 1;
+}
+.d11 h1:before, .d11 h1:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, rgb(163, 14, 14) 2px, rgb(218, 79, 79) 4px);
+}
+.d11 h1:before {left: 0;}
+.d11 h1:after {right: 0;}
+@media (max-width: 420px) {
+  .d11 h1 {font-size: 2em;}
+}
+  html,
+body {
+    
+    font-family: AsapRegular, sans-serif;
+    font-size: 11pt;
+    background: url(images/kot.jpg) no-repeat;
+    background-position: right 20px bottom -850px;
+    background-size: 55%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+//text
+.menu__link {
+  display: inline-block;
+  color: #131924;
+  text-decoration: none;
+  position: relative;
+  padding: 14px 0;
+  font-family: Andale Mono, monospace;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.040em;
+}
+//form
+.menu__link svg {
+  fill: none;
+  stroke: #9e061f;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 338;
+  stroke-dashoffset: 338;
+  stroke-linecap: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 60px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+  z-index: -1;
+}
+
+.menu__link--active svg {
+  stroke: #1cc206;
+}
+
+.menu__link--active svg,
+.menu__link:hover svg {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+ 
+}
+.menu__link:active svg
+{
+  stroke: #1cc206;
+}
+    
+
+#one {
+    padding-right: 200px;
+    text-align: center;
+    margin: 0%;
+}
+span {
+    font-size: 20px;
+    color: #f2f2f2;
+}
+img {
+    display: block;
+    margin: auto;
+}
+.smPic {
+    display: inline-table;
+    margin: auto;
+    width: 20%;
+    padding-right: 10px;
+}
+
