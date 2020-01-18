@@ -1,0 +1,35 @@
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+  integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<p></p>
+
+<div class="my_box_files">
+  <div class="sidebar">
+    <h1 style="color: rgb(7, 52, 250)">Загрузка файлов</h1>
+    <input #fileUpload type="file" (change)="fileChangeEvent($event)" /><br />
+    <button type="button" (click)="upload()">Загрузить</button>
+    <button type="button" (click)="cancelUpload()">Отмена</button>
+
+    <div style="color:rgb(255, 217, 0)">
+      {{errorMessage}}
+    </div>
+  </div>
+  <div class="content_files">
+    <div class="right_content">
+      <div class="table-wrapper-scroll-y my-scrollbar-files">
+        <form class="emp-form">
+          <table class="table table-hover">
+            <tbody>
+              <tr *ngFor="let file of downloadFiles ;index as i;">
+                <td>{{file}}</td>
+               
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 

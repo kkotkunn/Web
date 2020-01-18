@@ -1,0 +1,34 @@
+<p></p>
+<input type="text" class="form-control" [(ngModel)]="DoktorName" />
+<label>Доктор </label>
+<input type="text" class="form-control" [(ngModel)]="UslugiName" />
+<label>Название услуги </label>
+<input type="text" class="form-control" [(ngModel)]="Cost" />
+<label> Цена </label>
+<p></p>
+<button class="bttn add" (click)="addUslugi()">Добавить услугу</button>
+<table class="list-group">
+  <tr class="list-group-item" *ngFor="let uslugis of arrayOfUslugi">
+    <td class="DoktorName">
+      <h4>{{ uslugis.DoktorName }}</h4>
+    </td>
+    <td class="UslugiName">
+      <h4>{{ uslugis.UslugiName }}</h4>
+    </td>
+    <td class="Cost">
+      <h4>{{ uslugis.Cost }}</h4>
+    </td>
+    <td class="ChangeUslugi">
+      <h4><button class="bttn chng" (click)="setNewYear(uslugis)">Изменить услугу</button></h4>
+    </td>
+    <td class="SaveUslugi">
+      <h4><button class="bttn chng" (click)="setNewUslugi(uslugis)">Сохранить изменения</button></h4>
+    </td>
+    <td class="DelUslugi">
+      <h4><button class="bttn del" (click)="delUslugi(uslugis.UslugiId)">Удалить услугу</button></h4>
+    </td>
+  </tr>
+</table>
+<div id="form">
+  <input type="text" id="text" placeholder="search" [(ngModel)]="text" (ngModelChange)="getResult(text)">
+</div>

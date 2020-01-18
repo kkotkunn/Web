@@ -1,0 +1,24 @@
+<html lang="ru">
+
+<header>
+    <meta charset="utf-8">
+    <title>Библиотека</title>
+</header>
+
+<body>
+    <nav>
+        <ul>
+            <li><a routerLink="/info">Главная </a></li>
+            <li><a routerLink="/uslugi">Наши услуги </a></li>
+            <li><a routerLink="/doktors">Доктора </a></li>
+            <li><a routerLink="/collection">Коллекции </a></li>
+            <li><a routerLink="/info">О заведении </a></li>  
+            <li><a (click)="Logout()" ng-show="[AuthGuard]">Выход</a></li>
+          </ul>
+        </nav>
+        <div class="clear"></div>    
+        <router-outlet></router-outlet>
+    </body>
+    
+    </html>
+        
