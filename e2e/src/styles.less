@@ -1,6 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
 @import "config.less";
-
+@color-gray_light: #cbe2fdfb; 
+html,
+body {
+    
+    font-family: AsapRegular, sans-serif;
+    font-size: 11pt;
+    background: url(images/kot.jpg) no-repeat;
+    background-position: right 20px bottom -850px;
+    background-size: 55%;
+}
 .d11 {
   
   padding: 50px 20px;
@@ -34,24 +42,10 @@
 @media (max-width: 420px) {
   .d11 h1 {font-size: 2em;}
 }
-  html,
-body {
-    
-    font-family: AsapRegular, sans-serif;
-    font-size: 11pt;
-    background: url(images/kot.jpg) no-repeat;
-    background-position: right 20px bottom -850px;
-    background-size: 55%;
-}
-
-a {
-  text-decoration: none;
-}
-
 .menu {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left:85%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -102,7 +96,10 @@ a {
 {
   stroke: #1cc206;
 }
-    
+
+a {
+  text-decoration: none;
+}
 
 #one {
     padding-right: 200px;
@@ -124,3 +121,90 @@ img {
     padding-right: 10px;
 }
 
+
+nav {
+  margin: 0px auto 0;
+  width: 690px;
+  height: 45px;
+  .border;
+  .shadow;
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline;
+        a {
+          text-decoration: none;
+          float: left;
+          width: px;
+          height: 45px;
+          text-align: center;
+          line-height: 45px;
+          .textcolor(#000000); // You can change this line
+          .divider;
+          .gradient;
+          &:hover {
+            .hovereffect;
+          }
+        }
+      }
+      li:first-child a {
+        border-left: none;
+      }
+      li:last-child a {
+        border-right: none;
+      }
+    }
+  }
+
+div.sm-jumbotron{
+    margin: 0px;
+    padding: 2rem;
+    background-color: #ff8484;
+    color: #fff;
+}
+button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(98, 138, 184); /* Green */
+  color: white;
+}
+ 
+button.btn-submit{
+  background-color: #e67b7b;
+  color: #fff;
+  width: 100%;
+}
+button.btn-submit:focus,button.btn-submit:hover{
+  background-color: #e67b7b;
+}
+
+input.ng-invalid.ng-dirty{
+  border-bottom-color : #e91e63 !important;
+  box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+/*for error div i*/
+div.error-message i{
+  vertical-align: middle !important;
+}
+
+/*for tab control*/
+.tabs{
+  height: 65px;
+}
+.tabs .tab{
+  text-transform : none !important;
+  line-height: 65px;
+  height: 65px;
+}
+.tabs .tab a{
+  font-size: 25px;
+  color: rgb(8, 19, 18)ortant;
+}
+
+.tabs .tab a.active{
+  background-color: rgba(90, 154, 228, 0.808) !important;
+}
